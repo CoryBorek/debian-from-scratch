@@ -49,7 +49,102 @@ The only source file you will need to download is the source for dpkg:
 
 You will need to download the following .deb files and place them all in the same directory inside of your `$LFS` partition. Only these .deb files should occupy this directory. These are needed to install the entire dependency chain of `apt`. Open the link, and manually download the .deb file corresponding to your LFS system architecture:
 
-[apt](https://packages.debian.org/jessie/apt)
+
+[gcc-12-base](https://packages.debian.org/bookworm/gcc-12-base)
+
+[libgcc-s1](https://packages.debian.org/bookworm/libgcc-s1)
+
+[libc6](https://packages.debian.org/bookworm/libc6)
+
+[libcap-ng0](https://packages.debian.org/bookworm/libcap-ng0)
+
+[libaudit-common](https://packages.debian.org/bookworm/libaudit-common)
+[libaudit1](https://packages.debian.org/bookworm/libaudit1)
+
+[libcrypt1](https://packages.debian.org/bookworm/libcrypt1)
+
+[debconf](https://packages.debian.org/bookworm/debconf)
+
+[libdb5.3](https://packages.debian.org/bookworm/libdb5.3)
+
+[libpam0g](https://packages.debian.org/bookworm/libpam0g)
+
+
+[libpcre-2-8-0](https://packages.debian.org/bookworm/libpcre2-8-0)
+
+[libselinux1](https://packages.debian.org/bookworm/libselinux1)
+[libpam-modules-bin](https://packages.debian.org/bookworm/libpam-modules-bin)
+
+[libpam-modules](https://packages.debian.org/bookworm/libpam-modules)
+
+
+[libbz2-1.0](https://packages.debian.org/bookworm/libbz2-1.0)
+
+[libsemanage-common](https://packages.debian.org/bookworm/libsemanage-common)
+
+[libsepol2](https://packages.debian.org/bookworm/libsepol2)
+
+[libsemanage2](https://packages.debian.org/bookworm/libsemanage2)
+
+[passwd](https://packages.debian.org/bookworm/adduser)
+
+[adduser](https://packages.debian.org/bookworm/adduser)
+
+[debian-archive-keyring](https://packages.debian.org/bookworm/debian-archive-keyring)
+
+[libgpg-error0](https://packages.debian.org/bookworm/libgpg-error0)
+
+[libgcrypt20](https://packages.debian.org/bookworm/libgcrypt20)
+
+
+[zlib1g](https://packages.debian.org/bookworm/zlib1g)
+
+[gpgv](https://packages.debian.org/bookworm/gpgv)
+
+[liblz4-1](https://packages.debian.org/bookworm/liblz4-1)
+
+[liblzma5](https://packages.debian.org/bookworm/liblzma5)
+
+[libstd++6](https://packages.debian.org/bookworm/libstdc++6)
+
+[libcap2](https://packages.debian.org/bookworm/libcap2)
+
+[libzstd1](https://packages.debian.org/bookworm/libzstd1)
+
+[libsystemd0](https://packages.debian.org/bookworm/libsystemd0)
+
+[libudev1](https://packages.debian.org/bookworm/libudev1)
+
+[libxxhash0](https://packages.debian.org/bookworm/libxxhash0)
+
+
+[libapt-pkg6.0](https://packages.debian.org/bookworm/libapt-pkg6.0)
+
+[libgmp10](https://packages.debian.org/bookworm/libgmp10)
+
+[libnettle8](https://packages.debian.org/bookworm/libnettle8)
+
+[libhogweed6](https://packages.debian.org/bookworm/libhogweed6)
+
+[libunistring2](https://packages.debian.org/bookworm/libunistring2)
+
+[libidn2-0](https://packages.debian.org/bookworm/libidn2-0)
+
+[libffi8](https://packages.debian.org/bookworm/libffi8)
+
+[libp11-kit0](https://packages.debian.org/bookworm/libp11-kit0)
+
+[libtasn1-6](https://packages.debian.org/bookworm/libtasn1-6)
+
+
+[libseccomp2](https://packages.debian.org/bookworm/libseccomp2)
+
+
+[libgnutls30](https://packages.debian.org/bookworm/libgnutls30)
+
+[apt](https://packages.debian.org/bookworm/apt)
+
+--
 
 [debian-archive-keyring](https://packages.debian.org/jessie/debian-archive-keyring)
 
@@ -273,20 +368,20 @@ sources.list is a file which `apt` uses to contact the repositories that hold yo
 
 ```
 cat > /etc/apt/sources.list << "EOF"
-# Debian Jessie main repos
-deb http://httpredir.debian.org/debian/ jessie main  
-deb-src http://httpredir.debian.org/debian/ jessie main  
+# Debian Bookworm main repos
+deb http://httpredir.debian.org/debian/ bookworm main  
+deb-src http://httpredir.debian.org/debian/ bookworm main  
 
-#Debian Jessie security repos
-deb http://security.debian.org/ jessie/updates main  
-deb-src http://security.debian.org/ jessie/updates main  
+#Debian Bookworm security repos
+deb http://security.debian.org/ bookworm/updates main  
+deb-src http://security.debian.org/ bookworm/updates main  
 
 # non-free plugins
-deb http://http.debian.net/debian/ jessie non-free contrib main  
+deb http://http.debian.net/debian/ bookworm non-free contrib main  
 
-# jessie-updates, previously known as 'volatile'
-deb http://httpredir.debian.org/debian/ jessie-updates main  
-deb-src http://httpredir.debian.org/debian/ jessie-updates main
+# bookworm-updates, previously known as 'volatile'
+deb http://httpredir.debian.org/debian/ bookworm-updates main  
+deb-src http://httpredir.debian.org/debian/ bookworm-updates main
 EOF
 ```
 

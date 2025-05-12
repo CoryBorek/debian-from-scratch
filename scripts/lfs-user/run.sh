@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+./1-binutils.sh
+./2-gcc.sh
+./3-linux-headers.sh
+./4-glibc.sh
+./5-libstdcpp.sh
+./6-m4.sh
+./7-ncurses.sh
+./8-bash.sh
+./9-coreutils.sh
+./10-diffutils.sh
+./11-file.sh
+./12-findutils.sh
+./13-gawk.sh
+./14-grep.sh
+./15-gzip.sh
+./16-make.sh
+./17-patch.sh
+./18-sed.sh
+./19-tar.sh
+./20-xz.sh
+./21-binutils-2.sh
+./22-gcc-2.sh
